@@ -1,0 +1,4 @@
+photobyanni_db.sqlite3
+.idea/
+django_env/
+*.pyc
