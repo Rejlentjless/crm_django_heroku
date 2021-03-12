@@ -1,0 +1,24 @@
+ <form method="get" action="{% url 'mainapp:interaction_page' %}">
+    <p>Выбрать компанию
+    <select name="company" id="">
+        <option value="">---</option>
+        {% for company in companies_list %}
+            <option value="{{ company }}">{{ company }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" name="submit" value="Применить"/>
+    </p>
+</form>
+
+<form method="get" action="">
+    <p>Выбрать проект
+        <select name="project" id="">
+            <option value="">---</option>
+            {% for project in projects_list %}
+                <option value="{{ project }}">{{ project }}</option>
+            {% endfor %}
+        </select>
+    <input type="submit" name="submit" value="Применить"/>
+    </p>
+</form>
+<form method="get" action=""><input class="btn-danger" type="submit" name="submit" value="Сброс"/></form>
