@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     "ckeditor_uploader",
     # Django filter
     "django_filters",
+    # Django debug toolbar
+    "debug_toolbar",
+    # капча
+    "captcha",
 ]
 
 MIDDLEWARE = [
@@ -56,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Django debug toolbar
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -137,6 +143,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # ckeditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+# Django debug toolbar
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+# кэширование
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, "site_cache"),    # путь хранения кэша
+    }
+}
 
 
 import dj_database_url
