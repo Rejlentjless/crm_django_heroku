@@ -149,15 +149,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-# кэширование
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-#         'LOCATION': os.path.join(BASE_DIR, "site_cache"),    # путь хранения кэша
-#     }
-# }
-
-
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES["default"].update(db_from_env)
