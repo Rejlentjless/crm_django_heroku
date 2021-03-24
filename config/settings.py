@@ -150,12 +150,12 @@ INTERNAL_IPS = [
 ]
 
 # кэширование
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': os.path.join(BASE_DIR, "site_cache"),    # путь хранения кэша
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': os.path.join(BASE_DIR, "site_cache"),    # путь хранения кэша
+#     }
+# }
 
 
 import dj_database_url
